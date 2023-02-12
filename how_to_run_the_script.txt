@@ -1,0 +1,21 @@
+1) create network infrastructure
+create stack :
+./cfn_create_stack.sh cfn-network-infra cfn_network_infra_peterhuynh.yml cfn_network_infra_parameters_peterhuynh.json aws_profile_name
+
+describe stack :
+./cfn_describe_stack.sh cfn-network-infra aws_profile_name
+
+detele stack :
+./cfn_delete_stack.sh cfn-network-infra aws_profile_name
+
+2) create web server and load balancer 
+create stack :
+./cfn_create_stack.sh my-lb-web-project cfn_servers_peterhuynh.yaml cfn_servers_parameters_peterhuynh.json aws_profile_name
+
+describe stack :
+./cfn_describe_stack.sh  my-lb-web-project aws_profile_name
+
+delete stack :
+./cfn_delete_stack.sh my-lb-web-project  aws_profile_name
+
+3) My Project loadbalance DNS URL is at:  my-lb-WebAp-1OPDZ3TW2C0IY-1561266616.us-west-2.elb.amazonaws.com
